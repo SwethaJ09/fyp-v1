@@ -4,3 +4,4 @@ librosa
 matplotlib
 numpy
 TextBlob
+gunicorn==19.7.1

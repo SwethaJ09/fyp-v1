@@ -1,0 +1,6 @@
+Flask
+speechrecognition
+librosa
+matplotlib
+numpy
+TextBlob

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Evaluation Report</title>
+    <link rel="stylesheet" href="static/styles.css"/>
+
+</head>
+<body>
+    <h1>Speech Evaluation Report</h1>
+
+    <div class="section">
+        <h2>Transcribed Text:</h2>
+        <p class="result">{{ results['text'] }}</p>
+    </div>
+
+    <div class="charts-container">
+        <div class="chart-card">
+            <h2>Sentiment Analysis</h2>
+            <img src="data:image/png;base64,{{ sentiment_pie }}" alt="Sentiment Analysis Chart">
+        </div>
+        <div class="chart-card">
+            <h2>Clarity Score</h2>
+            <img src="data:image/png;base64,{{ clarity_pie }}" alt="Clarity Chart">
+        </div>
+        <div class="chart-card">
+            <h2>Stop Words</h2>
+            <img src="data:image/png;base64,{{ stopwords_pie }}" alt="Stop Words Chart">
+        </div>
+        <div class="chart-card">
+            <h2>Listenability</h2>
+            <img src="data:image/png;base64,{{ listenability_pie }}" alt="Listenability Chart">
+        </div>
+        <div class="chart-card">
+            <h2>Audio Duration</h2>
+            <img src="data:image/png;base64,{{ duration_pie }}" alt="Audio Duration Chart">
+        </div>
+        <div class="chart-card">
+            <h2>Speaking Pace (WPM)</h2>
+            <img src="data:image/png;base64,{{ wpm_pie }}" alt="Speaking Pace Chart">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Total Pause Duration: {{ results['total_pause_duration'] }} seconds</h2>
+        <h2>Audio Duration: {{ results['audio_duration'] }} seconds</h2>
+    </div>
+</body>
+</html>
